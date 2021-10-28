@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sub Ordinates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Manager</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sub_ordinates.each do |sub_ordinate| %>
+      <tr>
+        <td><%= sub_ordinate.name %></td>
+        <td><%= sub_ordinate.manager_id %></td>
+        <td><%= link_to 'Show', sub_ordinate %></td>
+        <td><%= link_to 'Edit', edit_sub_ordinate_path(sub_ordinate) %></td>
+        <td><%= link_to 'Destroy', sub_ordinate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sub Ordinate', new_sub_ordinate_path %>

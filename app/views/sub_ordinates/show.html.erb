@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sub_ordinate.name %>
+</p>
+
+<p>
+  <strong>Manager:</strong>
+  <%= @sub_ordinate.manager_id %>
+</p>
+
+<%= link_to 'Edit', edit_sub_ordinate_path(@sub_ordinate) %> |
+<%= link_to 'Back', sub_ordinates_path %>
